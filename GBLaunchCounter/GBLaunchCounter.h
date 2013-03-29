@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+typedef void(^Handler)(NSUInteger launchCount);
+
 @interface GBLaunchCounter : NSObject
+
++(void)trackLaunch;
++(NSUInteger)launchCount;
+
++(void)callHandler:(Handler)handler onLaunchNumber:(NSUInteger)number;
++(void)callHandler:(Handler)handler inNLaunches:(NSUInteger)number;
++(void)callHandler:(Handler)handler everyNLaunches:(NSUInteger)number;
 
 @end

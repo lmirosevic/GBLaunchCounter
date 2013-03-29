@@ -8,9 +8,77 @@
 
 /* Begin PBXBuildFile section */
 		8A6239791705B52B00A35499 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6239781705B52B00A35499 /* Cocoa.framework */; };
-		8A6239831705B52C00A35499 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A6239811705B52C00A35499 /* InfoPlist.strings */; };
 		8A6239871705B52C00A35499 /* GBLaunchCounter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6239861705B52C00A35499 /* GBLaunchCounter.m */; };
+		8A6239AF1705B88F00A35499 /* GBToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A6239AC1705B86F00A35499 /* GBToolbox.framework */; };
+		8A6239B01705B89100A35499 /* GBStorageController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A62399A1705B57200A35499 /* GBStorageController.framework */; };
+		8A6239FB1705BFB100A35499 /* GBLaunchCounter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A6239851705B52C00A35499 /* GBLaunchCounter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8A6239951705B57200A35499 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A62398D1705B57200A35499 /* GBStorageController.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8A1F347C166B7F0E00F24A5F;
+			remoteInfo = "GBStorageController-iOS";
+		};
+		8A6239971705B57200A35499 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A62398D1705B57200A35499 /* GBStorageController.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8A1F348D166B7F0E00F24A5F;
+			remoteInfo = "GBStorageController-iOS-UnitTests";
+		};
+		8A6239991705B57200A35499 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A62398D1705B57200A35499 /* GBStorageController.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8ABE7BC016F32E280015FE1F;
+			remoteInfo = "GBStorageController-OSX";
+		};
+		8A62399B1705B57200A35499 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A62398D1705B57200A35499 /* GBStorageController.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8ABE7BFB16F335F40015FE1F;
+			remoteInfo = "GBStorageController-OSX-UnitTests";
+		};
+		8A62399F1705B68B00A35499 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A62398D1705B57200A35499 /* GBStorageController.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8ABE7BBF16F32E280015FE1F;
+			remoteInfo = "GBStorageController-OSX";
+		};
+		8A6239A71705B86F00A35499 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A6239A11705B86F00A35499 /* GBToolbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8AD911B1162D9E2200C9D287;
+			remoteInfo = "GBToolbox-iOS";
+		};
+		8A6239A91705B86F00A35499 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A6239A11705B86F00A35499 /* GBToolbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8A0C4E34165FA60C00A990FB;
+			remoteInfo = GBToolboxUnitTests;
+		};
+		8A6239AB1705B86F00A35499 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A6239A11705B86F00A35499 /* GBToolbox.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8A0377FB16BFCD2F0096C448;
+			remoteInfo = "GBToolbox-OSX";
+		};
+		8A6239AD1705B87400A35499 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A6239A11705B86F00A35499 /* GBToolbox.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A0377FA16BFCD2F0096C448;
+			remoteInfo = "GBToolbox-OSX";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8A6239751705B52B00A35499 /* GBLaunchCounter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GBLaunchCounter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,10 +87,10 @@
 		8A62397C1705B52B00A35499 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8A62397D1705B52B00A35499 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8A6239801705B52B00A35499 /* GBLaunchCounter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GBLaunchCounter-Info.plist"; sourceTree = "<group>"; };
-		8A6239821705B52C00A35499 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8A6239841705B52C00A35499 /* GBLaunchCounter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBLaunchCounter-Prefix.pch"; sourceTree = "<group>"; };
 		8A6239851705B52C00A35499 /* GBLaunchCounter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GBLaunchCounter.h; sourceTree = "<group>"; };
 		8A6239861705B52C00A35499 /* GBLaunchCounter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GBLaunchCounter.m; sourceTree = "<group>"; };
+		8A62398D1705B57200A35499 /* GBStorageController.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GBStorageController.xcodeproj; path = ../GBStorageController/GBStorageController.xcodeproj; sourceTree = "<group>"; };
+		8A6239A11705B86F00A35499 /* GBToolbox.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GBToolbox.xcodeproj; path = ../GBToolbox/GBToolbox.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A6239B01705B89100A35499 /* GBStorageController.framework in Frameworks */,
+				8A6239AF1705B88F00A35499 /* GBToolbox.framework in Frameworks */,
 				8A6239791705B52B00A35499 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -40,6 +110,7 @@
 		8A62396B1705B52B00A35499 = {
 			isa = PBXGroup;
 			children = (
+				8A62399D1705B57500A35499 /* Libraries */,
 				8A62397E1705B52B00A35499 /* GBLaunchCounter */,
 				8A6239771705B52B00A35499 /* Frameworks */,
 				8A6239761705B52B00A35499 /* Products */,
@@ -87,10 +158,38 @@
 			isa = PBXGroup;
 			children = (
 				8A6239801705B52B00A35499 /* GBLaunchCounter-Info.plist */,
-				8A6239811705B52C00A35499 /* InfoPlist.strings */,
-				8A6239841705B52C00A35499 /* GBLaunchCounter-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A62398E1705B57200A35499 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A6239961705B57200A35499 /* libGBStorageController.a */,
+				8A6239981705B57200A35499 /* GBStorageControllerTests.octest */,
+				8A62399A1705B57200A35499 /* GBStorageController.framework */,
+				8A62399C1705B57200A35499 /* GBStorageController-OSX-UnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A62399D1705B57500A35499 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				8A6239A11705B86F00A35499 /* GBToolbox.xcodeproj */,
+				8A62398D1705B57200A35499 /* GBStorageController.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		8A6239A21705B86F00A35499 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A6239A81705B86F00A35499 /* libGBToolbox.a */,
+				8A6239AA1705B86F00A35499 /* GBToolboxUnitTests.octest */,
+				8A6239AC1705B86F00A35499 /* GBToolbox.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -100,6 +199,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A6239FB1705BFB100A35499 /* GBLaunchCounter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +218,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				8A6239AE1705B87400A35499 /* PBXTargetDependency */,
+				8A6239A01705B68B00A35499 /* PBXTargetDependency */,
 			);
 			name = GBLaunchCounter;
 			productName = GBLaunchCounter;
@@ -143,6 +245,16 @@
 			mainGroup = 8A62396B1705B52B00A35499;
 			productRefGroup = 8A6239761705B52B00A35499 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 8A62398E1705B57200A35499 /* Products */;
+					ProjectRef = 8A62398D1705B57200A35499 /* GBStorageController.xcodeproj */;
+				},
+				{
+					ProductGroup = 8A6239A21705B86F00A35499 /* Products */;
+					ProjectRef = 8A6239A11705B86F00A35499 /* GBToolbox.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				8A6239741705B52B00A35499 /* GBLaunchCounter */,
@@ -150,12 +262,64 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		8A6239961705B57200A35499 /* libGBStorageController.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGBStorageController.a;
+			remoteRef = 8A6239951705B57200A35499 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8A6239981705B57200A35499 /* GBStorageControllerTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			name = GBStorageControllerTests.octest;
+			path = "GBStorageController-iOS-UnitTests.octest";
+			remoteRef = 8A6239971705B57200A35499 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8A62399A1705B57200A35499 /* GBStorageController.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GBStorageController.framework;
+			remoteRef = 8A6239991705B57200A35499 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8A62399C1705B57200A35499 /* GBStorageController-OSX-UnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "GBStorageController-OSX-UnitTests.octest";
+			remoteRef = 8A62399B1705B57200A35499 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8A6239A81705B86F00A35499 /* libGBToolbox.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGBToolbox.a;
+			remoteRef = 8A6239A71705B86F00A35499 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8A6239AA1705B86F00A35499 /* GBToolboxUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GBToolboxUnitTests.octest;
+			remoteRef = 8A6239A91705B86F00A35499 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		8A6239AC1705B86F00A35499 /* GBToolbox.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GBToolbox.framework;
+			remoteRef = 8A6239AB1705B86F00A35499 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		8A6239731705B52B00A35499 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A6239831705B52C00A35499 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,16 +336,18 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		8A6239811705B52C00A35499 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A6239821705B52C00A35499 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		8A6239A01705B68B00A35499 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GBStorageController-OSX";
+			targetProxy = 8A62399F1705B68B00A35499 /* PBXContainerItemProxy */;
 		};
-/* End PBXVariantGroup section */
+		8A6239AE1705B87400A35499 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GBToolbox-OSX";
+			targetProxy = 8A6239AD1705B87400A35499 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8A6239881705B52C00A35499 /* Debug */ = {
@@ -211,9 +377,10 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -238,8 +405,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -251,8 +419,8 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GBLaunchCounter/GBLaunchCounter-Prefix.pch";
 				INFOPLIST_FILE = "GBLaunchCounter/GBLaunchCounter-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -266,8 +434,8 @@
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "GBLaunchCounter/GBLaunchCounter-Prefix.pch";
 				INFOPLIST_FILE = "GBLaunchCounter/GBLaunchCounter-Info.plist";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = framework;
 			};
@@ -292,6 +460,7 @@
 				8A62398C1705B52C00A35499 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
