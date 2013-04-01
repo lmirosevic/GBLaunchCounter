@@ -13,25 +13,12 @@
 
 static NSString * const kLaunchCountKey = @"kGBLaunchCounterLaunchCountKey";
 
-@interface GBLaunchCounter ()
-
-@property (strong, nonatomic) NSMutableArray    *deferredLaunchHandlers;
-
-@end
-
 @implementation GBLaunchCounter
-
-#pragma mark - storage
-
-#define _GBLaunchCounter [GBLaunchCounter sharedObject]
-_singleton(GBLaunchCounter, sharedObject)
-_lazy(NSMutableArray, deferredLaunchHandlers, _deferredLaunchHandlers)
 
 #pragma mark - public API
 
-+(void)trackLaunch {
++(void)track {
     [self _incrementLaunchCount];
-    [self _callPotentialDeferredLaunchHandlers];
 }
 
 +(NSUInteger)launchCount {
@@ -39,14 +26,9 @@ _lazy(NSMutableArray, deferredLaunchHandlers, _deferredLaunchHandlers)
 }
 
 
-+(void)callHandler:(Handler)handler onLaunchNumber:(NSUInteger)number {
++(void)callHandler:(void(^)(NSUInteger launchCount))handler onLaunchNumber:(NSUInteger)number {
     if (handler) {
-        //if we're not there yet, then store it until we get there
-        if ([self launchCount] < number) {
-            [_GBLaunchCounter.deferredLaunchHandlers addObject:@{@"handler":[handler copy], @"count":@(number)}];
-        }
-        //if we're there then call it right away
-        else if ([self launchCount] == number) {
+        if ([self launchCount] == number) {
             handler([self launchCount]);
         }
     }
@@ -55,38 +37,22 @@ _lazy(NSMutableArray, deferredLaunchHandlers, _deferredLaunchHandlers)
     }
 }
 
-+(void)callHandler:(Handler)handler inNLaunches:(NSUInteger)number {
-    [self callHandler:handler onLaunchNumber:[self launchCount] + number];
++(void)callHandler:(void(^)(NSUInteger launchCount))handler everyNLaunches:(NSUInteger)nLaunches startingAtLaunchNumber:(NSUInteger)number {
+    if (handler) {
+        if (([self launchCount] - number) % nLaunches == 0) {
+            handler([self launchCount]);
+        }
+    }
+    else {
+        @throw [NSException exceptionWithName:@"GBLaunchCounter" reason:@"must pass valid handler" userInfo:nil];
+    }
 }
 
-+(void)callHandler:(Handler)handler everyNLaunches:(NSUInteger)number {
-    //foo todo
++(void)callHandler:(void(^)(NSUInteger launchCount))handler everyNLaunches:(NSUInteger)nLaunches {
+    [self callHandler:handler everyNLaunches:nLaunches startingAtLaunchNumber:1];
 }
 
 #pragma mark - private API
-
-+(void)_callPotentialDeferredLaunchHandlers {
-    NSMutableArray *calledHandlers = [NSMutableArray new];
-    
-    //see if there is any deferred launch handler which matches our launch number
-    for (NSDictionary *handlerDict in _GBLaunchCounter.deferredLaunchHandlers) {
-        if ([handlerDict[@"count"] integerValue] == [self launchCount]) {
-            //call our block
-            Handler handlerBlock = handlerDict[@"handler"];
-            if (handlerBlock) {
-                handlerBlock([self launchCount]);
-            }
-            
-            //mark it for removal
-            [calledHandlers addObject:handlerDict];
-        }
-    }
-    
-    for (NSDictionary *handlerDict in calledHandlers) {
-        //remove the block from memory
-        [_GBLaunchCounter.deferredLaunchHandlers removeObject:handlerDict];
-    }
-}
 
 +(void)_incrementLaunchCount {
     NSUInteger oldLaunchCount = [self _readLaunchCountNumber];
