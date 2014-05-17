@@ -1,5 +1,4 @@
-GBLaunchCounter
-============
+# GBLaunchCounter ![Version](https://img.shields.io/cocoapods/v/GBLaunchCounter.svg?style=flat)&nbsp;![License](https://img.shields.io/badge/license-Apache_2-green.svg?style=flat)
 
 Count how many times your iOS or Mac OS X app has been launched, and optionally register blocks for when a certain number of launches has occurred.
 
