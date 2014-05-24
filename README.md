@@ -44,10 +44,6 @@ Dependencies
 
 * [GBStorage](https://github.com/lmirosevic/GBStorage)
 
-iOS: Add to your project's workspace, add dependency for GBLaunchCounter-iOS, link with your binary, add -ObjC linker flag, add header search path.
-
-OS X: Add to your project's workspace, add dependency for GBLaunchCounter-OSX, link with your binary, add "copy file" step to copy framework into bundle.
-
 Copyright & License
 ------------
 
