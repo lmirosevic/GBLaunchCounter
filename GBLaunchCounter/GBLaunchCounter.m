@@ -8,10 +8,10 @@
 
 #import "GBLaunchCounter.h"
 
-#import <GBStorageController/GBStorageController.h>
-#import <GBToolbox/GBToolbox.h>
+#import <GBStorage/GBStorage.h>
 
 static NSString * const kLaunchCountKey = @"kGBLaunchCounterLaunchCountKey";
+static NSString * const kStorageNamespace = @"GBLaunchCounter";
 
 @implementation GBLaunchCounter
 
@@ -62,7 +62,7 @@ static NSString * const kLaunchCountKey = @"kGBLaunchCounterLaunchCountKey";
 }
 
 +(NSUInteger)_readLaunchCountNumber {
-    id launchCountObject = GBStorage[kLaunchCountKey];
+    id launchCountObject = GBStorage(kStorageNamespace)[kLaunchCountKey];
     //make sure its set
     if ([launchCountObject isKindOfClass:[NSNumber class]]) {
         NSInteger launchCountSignedIntegerValue = [launchCountObject integerValue];
@@ -80,8 +80,8 @@ static NSString * const kLaunchCountKey = @"kGBLaunchCounterLaunchCountKey";
 }
 
 +(void)_storeLaunchCountNumber:(NSUInteger)count {
-    GBStorage[kLaunchCountKey] = @(count);
-    [GBStorage save];
+    GBStorage(kStorageNamespace)[kLaunchCountKey] = @(count);
+    [GBStorage(kStorageNamespace) save:kLaunchCountKey];
 }
 
 @end
