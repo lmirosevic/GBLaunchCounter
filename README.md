@@ -33,23 +33,16 @@ You can optionally register a block to be called for when you app has reached a 
 } everyNLaunches:3];
 ```
 
-Don't forget to import static library header (on iOS):
+Don't forget to import header:
 
 ```objective-c
-#import "GBLaunchCounter.h" 					//iOS
-```
-
-...or framework header (on OS X):
-
-```objective-c
-#import <GBLaunchCounter/GBLaunchCounter.h> 	//OS X
+#import <GBLaunchCounter/GBLaunchCounter.h>
 ```
 
 Dependencies
 ------------
 
-* [GBToolbox](https://github.com/lmirosevic/GBToolbox)
-* [GBStorageController](https://github.com/lmirosevic/GBStorageController)
+* [GBStorage](https://github.com/lmirosevic/GBStorage)
 
 iOS: Add to your project's workspace, add dependency for GBLaunchCounter-iOS, link with your binary, add -ObjC linker flag, add header search path.
 
@@ -66,4 +59,3 @@ http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lmirosevic/gblaunchcounter/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
